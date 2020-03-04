@@ -1,0 +1,15 @@
+.game-deal-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 1px black solid;
+  background-color: coral;
+}
+
+.game-deal {
+  min-width: 310px;
+  min-height: 20px;
+  border: 1px black solid;
+  background-color: chartreuse;
+}

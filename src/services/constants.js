@@ -1,1 +1,3 @@
-export const sourceUrl = 'https://savecoins.app/game';
+const baseContentUrl = 'https://savecoins.app/game';
+
+export default baseContentUrl;

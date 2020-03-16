@@ -1,6 +1,11 @@
+// External
 import React, { useCallback, useEffect, useState } from 'react';
+import Button from '@material-ui/core/Button';
+
+// Internal
 import getScrapedGame from '../services/webscrapping';
 import parseScrapedData from '../services/helpers';
+
 import styles from './GameDeal.css';
 
 const GameDeal = ({ game }) => {
@@ -32,8 +37,9 @@ const GameDeal = ({ game }) => {
           <span>{gamePrice}</span>
         </p>
         <p>
-          <span>Where to buy it: </span>
-          <span><a href={url}>Link</a></span>
+        <Button variant='contained' color='primary' href={url}>
+          Buy it
+        </Button>
         </p>
       </div>
     </div>

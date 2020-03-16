@@ -1,6 +1,6 @@
 // External
 import React, { useCallback, useEffect, useState } from 'react';
-import Button from '@material-ui/core/Button';
+import { Button, Card } from '@material-ui/core';
 
 // Internal
 import getScrapedGame from '../services/webscrapping';
@@ -27,22 +27,20 @@ const GameDeal = ({ game }) => {
   }, [fetchData, gamePrice]);
 
   return(
-    <div className='game-deal-container'>
-      <div className='game-deal'>
-        <p>
-          <span>{name}</span>
-        </p>
-        <p>
-          <span>Best Price: </span>
-          <span>{gamePrice}</span>
-        </p>
-        <p>
-        <Button variant='contained' color='primary' href={url}>
-          Buy it
-        </Button>
-        </p>
-      </div>
-    </div>
+    <Card style={{background: '#3CADD5', padding: '0 15px'}}>
+      <p>
+        <span>{name}</span>
+      </p>
+      <p>
+        <span>Best Price: </span>
+        <span>{gamePrice}</span>
+      </p>
+      <p>
+      <Button variant='contained' color='primary' href={url}>
+        Buy it
+      </Button>
+      </p>
+    </Card>
   );
 };
 

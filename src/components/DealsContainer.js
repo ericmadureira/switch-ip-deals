@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import GameDeal from './GameDeal';
+import { gamesInfos } from '../services/constants';
 import styles from './DealsContainer.css';
-import getScrapedGame from '../services/webscrapping';
 
-const info = getScrapedGame();
+const DealsContainer = () => {
+  const games = useMemo(() => gamesInfos.map(game => (
+    <GameDeal
+      game={game}
+    />
+  )), []);
 
-const DealsContainer = () => (
-  <div className='deals-container'>
-    <GameDeal />
-  </div>
-);
+  return(
+    <div className='deals-container'>
+      {games}
+    </div>
+  );
+};
 
 export default DealsContainer;

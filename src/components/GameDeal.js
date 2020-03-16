@@ -5,6 +5,7 @@ import { Button, Card } from '@material-ui/core';
 // Internal
 import getScrapedGame from '../services/webscrapping';
 import parseScrapedData from '../services/helpers';
+import { baseContentUrl } from '../services/constants';
 
 import styles from './GameDeal.css';
 
@@ -36,7 +37,7 @@ const GameDeal = ({ game }) => {
         <span>{gamePrice}</span>
       </p>
       <p>
-      <Button variant='contained' color='primary' href={url}>
+      <Button variant='contained' color='primary' href={`${baseContentUrl}/${url}`} target={'_blank'}>
         Buy it
       </Button>
       </p>

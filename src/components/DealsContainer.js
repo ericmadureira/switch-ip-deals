@@ -1,4 +1,8 @@
+// External
 import React, { useMemo } from 'react';
+import { Grid } from '@material-ui/core';
+
+// Internal
 import GameDeal from './GameDeal';
 import { gamesInfos } from '../services/constants';
 import styles from './DealsContainer.css';
@@ -11,9 +15,14 @@ const DealsContainer = () => {
   )), []);
 
   return(
-    <div className='deals-container'>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+    >
       {games}
-    </div>
+    </Grid>
   );
 };
 

@@ -5,14 +5,14 @@ import { Button, Card } from '@material-ui/core';
 // Internal
 import getScrapedGame from '../services/webscrapping';
 import parseScrapedData from '../services/helpers';
-import { baseContentUrl } from '../services/constants';
-
+import { gameBuyUrl } from '../services/constants';
 import styles from './GameDeal.css';
 
 const GameDeal = ({ game }) => {
   const [gamePrice, setGamePrice] = useState('');
   // later implement loader
-  const { name, url } = game;
+  const { name, url, primaryColor } = game;
+  const gameBuyLink = gameBuyUrl(url);
 
   const fetchData = useCallback(async () => {
     const scrapedHtmlBody = await getScrapedGame(url);
@@ -28,16 +28,22 @@ const GameDeal = ({ game }) => {
   }, [fetchData, gamePrice]);
 
   return(
-    <Card style={{background: '#3CADD5', padding: '0 15px'}}>
+    <Card className='game-card' style={{ background: primaryColor }}>
       <p>
-        <span>{name}</span>
+        <span className='game-title'>{name}</span>
       </p>
       <p>
         <span>Best Price: </span>
         <span>{gamePrice}</span>
       </p>
       <p>
-      <Button variant='contained' color='primary' href={`${baseContentUrl}/${url}`} target={'_blank'}>
+      <Button
+        variant='contained'
+        color='primary'
+        background='black'
+        href={gameBuyLink}
+        target={'_blank'}
+      >
         Buy it
       </Button>
       </p>

@@ -1,6 +1,6 @@
 // External
 import React, { useCallback, useEffect, useState } from 'react';
-import { Button, Card } from '@material-ui/core';
+import { Button, Card, CircularProgress } from '@material-ui/core';
 
 // Internal
 import getScrapedGame from '../services/webscrapping';
@@ -10,7 +10,8 @@ import styles from './GameDeal.css';
 
 const GameDeal = ({ game }) => {
   const [gamePrice, setGamePrice] = useState('');
-  // later implement loader
+  const [isLoadingPrice, setIsLoadingPrice] = useState(true);
+
   const { name, url, primaryColor } = game;
   const gameBuyLink = gameBuyUrl(url);
 
@@ -23,6 +24,7 @@ const GameDeal = ({ game }) => {
     fetchData()
     .then(data => {
       setGamePrice(parseScrapedData(data));
+      setIsLoadingPrice(false);
     })
     .catch(e => console.log('PROMISE ERROR: ', e));
   }, [fetchData, gamePrice]);
@@ -34,7 +36,7 @@ const GameDeal = ({ game }) => {
       </p>
       <p>
         <span>Best Price: </span>
-        <span>{gamePrice}</span>
+        {isLoadingPrice ? <CircularProgress size={20} /> : <span>{gamePrice}</span>}
       </p>
       <p>
       <Button

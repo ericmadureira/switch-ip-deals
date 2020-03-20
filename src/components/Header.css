@@ -1,3 +1,27 @@
-.header-title {
-  font-size: 2em;
+@font-face {
+  font-family: zeldabotw;
+  src: url('../assets/fonts/zeldabotw.ttf') format('Truetype');
+}
+
+.title {
+  font-family: zeldabotw;
+  color: #fff;
+  text-shadow:
+    0 0 #000,
+    -2px 0 0 #000,
+    0 2px 0 #000,
+    0 -2px 0 #000,
+    1px 1px #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+.header {
+  font-size: 3em;
+  margin: 24px 0;
+}
+
+.sub-header {
+  font-size: 1.5em;
+  margin: 12px 0;
 }

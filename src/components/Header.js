@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './Header.css';
 
 const Header = () => (
-  <header className='header-title'>
-    <p>Switch IP Deals</p>
+  <header>
+    <p className='title header'>Switch IP Deals</p>
+    <p className='title sub-header'>Discounts on major nintendo switch games</p>
   </header>
 );
 

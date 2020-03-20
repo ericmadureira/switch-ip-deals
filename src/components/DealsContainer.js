@@ -5,7 +5,6 @@ import { Grid } from '@material-ui/core';
 // Internal
 import GameDeal from './GameDeal';
 import { gamesInfos } from '../services/constants';
-import styles from './DealsContainer.css';
 
 const DealsContainer = () => {
   const games = useMemo(() => gamesInfos.map(game => (
@@ -17,9 +16,10 @@ const DealsContainer = () => {
   return(
     <Grid
       container
-      direction="row"
-      justify="center"
-      alignItems="center"
+      direction='row'
+      justify='center'
+      alignItems='center'
+      className='deals-container'
     >
       {games}
     </Grid>

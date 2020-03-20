@@ -18,5 +18,3 @@ We access another websites to look for the best price of the listed games. To do
 
 ## Purpose
 Learn a bit of scraping and practice JS/React/Node.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

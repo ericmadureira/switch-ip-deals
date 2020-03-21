@@ -2,3 +2,9 @@
   padding: 20px;
   font-size: 1.25em;
 }
+
+a:link, a:visited {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}

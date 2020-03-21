@@ -16,6 +16,26 @@ export const gamesInfos = [
     url: 'super-mario-odyssey',
     primaryColor: '#F1452F',
   },
+  {
+    name: 'ARMS',
+    url: 'arms',
+    primaryColor: '#F9EF3C',
+  },
+  {
+    name: 'Splatoon 2',
+    url: 'splatoon-2',
+    primaryColor: '#F05998',
+  },
+  {
+    name: 'Kirby Star Allies',
+    url: 'kirby-star-allies',
+    primaryColor: '#F3A7D4',
+  },
+  {
+    name: 'Donkey Kong Country: Tropical Freeze',
+    url: 'donkey-kong-country-tropical-freeze',
+    primaryColor: '#9AE7FB',
+  },
 ];
 
 export const gameBuyUrl = (url) => `${baseContentUrl}/${url}`;

@@ -6,8 +6,9 @@ We access another websites to look for the best price of the listed games. To do
 
 ## How to run
 1. Clone the repository, like `git clone git@github.com:ericmadureira/switch-ip-deals.git`
-2. Run `yarn run-app` to run both React client and Node server
-3. The app will be displayed at `http://localhost:3000`
+2. Run `yarn` to install dependencies
+3. Run `yarn run-app` to run both React client and Node server
+4. The app will be displayed at `http://localhost:3000`
 
 ## Libs
 - [Cheerio](https://github.com/cheeriojs/cheerio) (html parsing)
